@@ -3,12 +3,14 @@
  * We can import all the separately created components and add that to our webpage
 */
 import React from 'react';
-import Hello from './components/hello.js';
+import CodeEditor from './components/codeEditor.js';
 
 class App extends React.Component {
     render() {
         return (
-            <Hello />
+            <>
+                <CodeEditor />
+            </>
         );
     }
 }
