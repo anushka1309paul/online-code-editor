@@ -1,5 +1,5 @@
 import React from 'react';
-import ReactPrismEditor from "react-prism-editor";
+import Prism from 'prismjs';
 
 class CodeEditor extends React.Component {
     constructor(props) {
@@ -8,18 +8,8 @@ class CodeEditor extends React.Component {
 
     render() {
         return (
-            <ReactPrismEditor
-                language={"c"}
-                theme={"default"}
-                code={""}
-                lineNumber={true}
-                readOnly={false}
-                clipboard={false}
-                changeCode={code => {
-                    this.code = code
-                    console.log(code)
-                }}
-            />
+            <>
+            </>
         );
     }
 }

@@ -4,13 +4,23 @@
 */
 import React from 'react';
 import CodeEditor from './components/codeEditor.js';
+import ReactPrismEditor from "react-prism-editor";
 
 class App extends React.Component {
     render() {
         return (
-            <>
-                <CodeEditor />
-            </>
+            <ReactPrismEditor
+                language={"c"}
+                theme={"default"}
+                code={""}
+                lineNumber={true}
+                readOnly={false}
+                clipboard={false}
+                changeCode={code => {
+                    this.code = code
+                    console.log(code)
+                }}
+            />
         );
     }
 }
