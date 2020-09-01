@@ -1,0 +1,112 @@
+body {
+    border: 5px solid rgb(7, 20, 7);
+    font-size: 18px;
+    font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+    font-weight: 400;
+ }
+ .container {
+    background-color: cadetblue;
+    height: 100vh;
+    width: 100vw;
+    display: grid;
+    grid-template-rows: 0.1fr 1fr 2fr 1fr 2.5fr;
+    grid-template-columns: 1fr 4fr 1.3fr 1.3fr;
+    gap: 10px;
+ }
+ .logo {
+    float: left;
+ }
+ nav {
+    float: right;
+ }
+ .navbar {
+    background-color: rgb(47, 126, 87);
+    grid-row: 1/2;
+    grid-column: 1/5;
+ }
+ .navbar::after {
+    content: '';
+    display: table;
+    clear: both;
+ }
+ h1 {
+    color: aliceblue;
+    display: inline-block;
+    margin-left: 30px;
+    margin-bottom: 0px;
+    margin-top: 0px;
+    padding-top: 10px;
+ }
+ nav ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+ }
+ nav li {
+    display: inline-block;
+    margin-left: 40px;
+    padding-top: 25px;
+    position: relative;
+ }
+ nav a {
+    color: #444;
+    text-decoration: none;
+ }
+ nav a:hover {
+ color: #000;
+ }
+ nav a::before {
+    content: '';
+    display: block;
+    height: 5px;
+    width: 0%;
+    background-color: #444;
+    position: absolute;
+    top: 0;
+    transition: all ease-in-out 250ms;
+ }
+ nav a:hover::before {
+    width: 100%;
+ }
+ .searchbox {
+    background-color: rgb(47, 126, 87);
+    grid-row: 2/3;
+    grid-column: 1/2;
+ }
+ .templates {
+    background-color: rgb(175, 201, 175);
+    grid-row: 3/6;
+    grid-column: 1/2;
+ }
+ .input {
+    background-color: rgb(28, 90, 54);
+    grid-row: 2/6;
+    grid-column: 2/3;
+ }
+ .testcases {
+    background-color: rgb(41, 141, 66);
+    grid-row: 2/4;
+    grid-column: 3/4;
+ }
+ .output {
+    background-color: rgb(47, 172, 109);
+    grid-row: 2/4;
+    grid-column: 4/5;
+ }
+ .run {
+    background-color: rgb(123, 170, 123);
+    grid-row: 4/5;
+    grid-column: 3/5;
+ }
+ .details {
+    background-color: rgb(20, 136, 26);
+    grid-row: 5/6;
+    grid-column: 3/5;
+ }
+ .in {
+    align-self: centre;
+    width: 195px;
+    height:120px;
+    background-color: rgba(27, 112, 97, 0.8);
+ }
+ 
