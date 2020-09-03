@@ -98,6 +98,24 @@ body {
     grid-row: 4/5;
     grid-column: 3/5;
  }
+.brun{
+    background-color: rgba(126, 202, 26, 0.637);
+    margin-left: 1%;
+    margin-right: 1%;
+    border-bottom-color: rgba(126, 202, 26, 0.637);
+ }
+ .bsave{
+   background-color: rgba(126, 202, 26, 0.637);
+   margin-left: 1%;
+   margin-right: 1%;
+   border-bottom-color: rgba(126, 202, 26, 0.637);
+ }
+ .bsout{
+   background-color: rgba(126, 202, 26, 0.637);
+    margin-left: 1%;
+    margin-right: 1%;
+    border-bottom-color: rgba(126, 202, 26, 0.637);
+ }
  .details {
     background-color: rgb(20, 136, 26);
     grid-row: 5/6;
