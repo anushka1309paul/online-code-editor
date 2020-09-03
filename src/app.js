@@ -26,14 +26,13 @@ class App extends React.Component {
                     <ReactPrismEditor
                         className="input"
                         language={"c"}
-                        theme={"default"}
+                        theme={"okaidia"}
                         code={""}
                         lineNumber={true}
                         readOnly={false}
                         clipboard={false}
                         changeCode={code => {
                             this.code = code
-                            console.log(code)
                         }}
                     />
                     <div className="testcases">
