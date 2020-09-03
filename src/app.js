@@ -42,9 +42,9 @@ class App extends React.Component {
                         <Output text="Something"/>
                     </div>
                     <div className="run">
-                        <button>Run</button>
-                        <button>Save</button>
-                         <button>Save output</button>
+                        <button className="brun">Run</button>
+                        <button className="bsave">Save</button>
+                         <button className="bsout">Save output</button>
                     </div>
                     <div className="details">Execution Time and compile features</div>
                 </div>
