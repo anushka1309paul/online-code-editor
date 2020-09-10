@@ -1,7 +1,6 @@
 import React from 'react';
 import CodeEditor from './components/codeEditor.js';
 import ReactPrismEditor from "react-prism-editor";
-import Input from './components/Input.js';
 import Output from './components/Output.js'
 import './css/App.css';
 
@@ -35,18 +34,7 @@ class App extends React.Component {
                             this.code = code
                         }}
                     />
-                    <div className="testcases">
-                        <Input />
-                    </div>
-                    <div className="output">
-                        <Output text="Something"/>
-                    </div>
-                    <div className="run">
-                        <button className="brun">Run</button>
-                        <button className="bsave">Save</button>
-                         <button className="bsout">Save output</button>
-                    </div>
-                    <div className="details">Execution Time and compile features</div>
+                    <div className="right"><Output /></div>
                 </div>
             </>
         );
