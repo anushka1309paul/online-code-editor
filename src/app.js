@@ -5,6 +5,11 @@ import Output from './components/Output.js'
 import './css/App.css';
 
 class App extends React.Component {
+    constructor(props) {
+      super(props);
+      this.state = { code: '' };
+    }
+
     render() {
         return (
             <>
@@ -31,7 +36,8 @@ class App extends React.Component {
                         readOnly={false}
                         clipboard={false}
                         changeCode={code => {
-                            this.code = code
+                            this.code = code;
+                            this.setState({code: this.code});
                         }}
                     />
                     <div className="right"><Output /></div>
