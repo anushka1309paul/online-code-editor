@@ -2,6 +2,7 @@ import React from 'react';
 import CodeEditor from './components/codeEditor.js';
 import ReactPrismEditor from "react-prism-editor";
 import Output from './components/Output.js'
+import {Data} from './components/Data.js';
 import './css/App.css';
 
 class App extends React.Component {
@@ -38,6 +39,7 @@ class App extends React.Component {
                         changeCode={code => {
                             this.code = code;
                             this.setState({code: this.code});
+                            Data.source_code=this.state.code
                         }}
                     />
                     <div className="right"><Output /></div>
