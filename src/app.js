@@ -1,11 +1,16 @@
 import React from 'react';
 import CodeEditor from './components/codeEditor.js';
 import ReactPrismEditor from "react-prism-editor";
-import Input from './components/Input.js';
 import Output from './components/Output.js'
+import {Data} from './components/Data.js';
 import './css/App.css';
 
 class App extends React.Component {
+    constructor(props) {
+      super(props);
+      this.state = { code: '' };
+    }
+
     render() {
         return (
             <>
@@ -26,28 +31,18 @@ class App extends React.Component {
                     <ReactPrismEditor
                         className="input"
                         language={"c"}
-                        theme={"default"}
+                        theme={"okaidia"}
                         code={""}
                         lineNumber={true}
                         readOnly={false}
                         clipboard={false}
                         changeCode={code => {
-                            this.code = code
-                            console.log(code)
+                            this.code = code;
+                            this.setState({code: this.code});
+                            Data.source_code=this.state.code
                         }}
                     />
-                    <div className="testcases">
-                        <Input />
-                    </div>
-                    <div className="output">
-                        <Output text="Something"/>
-                    </div>
-                    <div className="run">
-                        <button>Run</button>
-                        <button>Save</button>
-                         <button>Save output</button>
-                    </div>
-                    <div className="details">Execution Time and compile features</div>
+                    <div className="right"><Output /></div>
                 </div>
             </>
         );
